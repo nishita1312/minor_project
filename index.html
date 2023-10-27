@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TourMPedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="menu-bar" class="fas fa-bars"></div>
+        <img src="finallll.png" height="70" alt="logo">
+
+       <nav class="nav-bar">
+        <a href="index.html">Home</a>
+        
+        <!-- Dropdown for Explore -->
+        <div class="dropdown">
+            <a href="#">Explore </a>
+            <div class="dropdown-content">
+                <a href="forts.html">Forts and Palaces</a>
+                <a href="museums.html">Museums</a>
+                <a href="#national-parks">National Parks</a>
+                <a href="#lakes-waterfall">Lakes & Waterfalls</a>
+                <a href="#hills">Hills</a>
+                <a href="#unesco">UNESCO Sites</a>
+                <a href="#spiritual-places">Spiritual Places</a>
+            </div>
+        </div>
+
+        <!-- Dropdown for Experience -->
+        <div class="dropdown">
+            <a href="#">Experience </a>
+            <div class="dropdown-content">
+                <a href="#sound-light-shows">Sound and Light Shows</a>
+                <a href="#art-craft">Art and Craft</a>
+                <a href="#music-dance">Music and Dance</a>
+
+            </div>
+        </div>
+
+        <!-- Dropdown for Book -->
+        <div class="dropdown">
+            <a href="#">Book Tickets </a>
+            <div class="dropdown-content">
+                <a href="#flight">Flight</a>
+                <a href="#train">Train</a>
+            </div>
+        </div> 
+        <a href="#plan">Plan your Day </a>
+        <a href="#about">About Us</a>
+        <a href="#contactus">Contact Us</a>
+       </nav>
+       <div class="icons">
+        <i class="fa-solid fa-magnifying-glass" id="search-btn"></i>
+        <i class="fa-regular fa-user" id="login-btn"></i>
+       </div>
+       <form action=" " class="search-bar-container">
+         <input type="search" id="search-bar" placeholder="Search here">
+         <!-- <label for="search-bar"><i class="fa-solid fa-magnifying-glass" id="search-btn"></i></label> -->
+       </form>
+    </header>
+
+<!-- Login form  -->
+<div class="login-form-container">
+    <i class="fa-regular fa-circle-xmark" id="form-close"></i>
+    <form action=" ">
+        <h3>Login</h3>
+        <input type="email" class="box" placeholder="Enter your email">
+        <input type="password" class="box" placeholder="Enter password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for=" remember">Remember Me</label>
+        <p>Forgot Password?<a href="forgot.html">Click here</a></p>
+        <p>Don't have an account<a href="signup.html">Register now!</a></p>
+    </form>
+</div>
+
+<!-- home section  -->
+<section class="home" id="home">
+
+<div class="content">
+    <h3>MP:The Heart Of India</h3>
+    <p>Adventure is Worthwhile</p>
+    <a href="#" class="btn">Discover more</a>
+
+
+</div>
+<!-- <div class="controls">
+    <span class="vid-btn active" data-src="nature.mp4"></span>
+    <span class="vid-btn" data-src="maheshwar.mp4"></span>
+    <span class="vid-btn" data-src="kanha.mp4"></span>
+    <span class="vid-btn" data-src="waterfall_-_24515 (1080p).mp4"></span>
+    <span class="vid-btn" data-src="sunset.mp4"></span>
+    <span class="vid-btn" data-src="temple.mp4"></span>
+
+
+</div> -->
+
+
+<div class="video-container">
+    <video src="video1.mp4" id="video-slider" loop autoplay muted ></video>
+</div>
+</section>
+
+
+
+<!-- images  -->
+<div class="top-section">
+    <div class="box">
+        <div class="box-content">
+            <h2>DESTINATIONS</h2>
+            <div class="box-img" style="background-image: url('pachmari1.jpg');"></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-content">
+            <h2>EVENTS</h2>
+            <div class="box-img" style="background-image: url('Events.jpg');"></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-content">
+            <h2>ART & CULTURE</h2>
+            <div class="box-img" style="background-image: url('art.jpg');"></div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="box-content">
+            <h2> ADVENTURE </h2>
+            <div class="box-img" style="background-image: url('adventure.jpg');"></div>
+        </div>
+    </div>
+    
+</div>
+<!-- reasons -->
+     <div class="reason-container">
+        <!-- <h2>Reasons To Explore MP</h2> -->
+        <h1 class="heading">
+            <span>Reasons</span>
+            <span class="space"></span>
+            <span>TO</span>
+            <span class="space"></span>
+            <span>Explore</span>
+            <span class="space"></span>
+            <span>MP</span>
+        </h1>
+        <div class="reason1 slider">
+            <img src="reason_1.png" alt="image">
+            <h3>Three UNESCO World Heritage Sites</h3>
+            <p><span>Khajuraho Group</span> of Monuments, adorned with intricate erotic carvings;</p> 
+            <p>the <span>Bhimbetka Rock Shelters</span>, featuring prehistoric cave paintings;</p>
+            <p>and the <span>Sanchi Stupa</span> , an iconic symbol of India's spiritual heritage</p>
+        </div>
+        <div class="reason2 slider">
+            <img src="reason_2.png" alt="image">
+            <h3>11 National parks and 24 Wild Life Sanctuaries</h3>
+            <p>Explore the wilderness, experience thrilling <span>safaris</span> ,<br> with the <span>highest number of Tigers in India</span> , offers a unique opportunity to witness these majestic creatures in their natural habitat.</p>
+        </div>
+        <div class="reason3 slider">
+            <img src="reason_3.png" alt="image">
+            <h3>Rich Natural Beauty</h3>
+            <p>Madhya Pradesh's rich natural beauty, from its <span>dense forests</span> to<br> <span>serene lakes</span> , paints a breathtaking backdrop for travelers to explore. </p>
+        </div>
+        <div class="reason4 slider">
+            <img src="reason_4.png" alt="image">
+            <h3>Two Jyotirlingas out of 12</h3>
+            <p>Adorned with spiritual treasures, houses two of the sacred 12 Jyotirlingas -<br> <span>Omkareshwar and Mahakaleshwar</span> ,<br> inviting pilgrims to seek divine blessings.</p>
+        </div>
+    </div>
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+        <h1 class="heading">
+            <span>G</span>
+            <span>A</span>
+            <span>L</span>
+            <span>L</span>
+            <span>E</span>
+            <span>R</span>
+            <span>Y</span>
+        </h1>
+        <div class="box-container">
+            <div class="row">
+                <img src="forest.jpg" height="300" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="500" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="300" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="200" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="400" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="200" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <img src="forest.jpg" height="300" alt="image">
+                <div class="layers">
+                    <h3>amazing places</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatum aliquid eligendi minus magnam ducimus deserunt corrupti doloremque commodi velit amet, animi mollitia earum temporibus </p>
+                    <a href="#"><i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

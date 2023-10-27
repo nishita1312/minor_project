@@ -1,0 +1,931 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+:root{
+    --orange: #ffa550;
+} 
+::selection{
+    background: var(--orange);
+    color: #fff;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 40rem 9%;
+
+}
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+}
+.heading span{
+    font-size: 3.5rem;
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+    text-align: center;
+}
+.heading span.space{
+   background: none;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--orange);
+    color: #fff;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: rgba(255,165,0,.2);
+    color: var(--orange);
+}
+
+form i{
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+form i:hover{ 
+    color: var(--orange);
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    font-size: 1.5rem;
+    margin: 0.3rem;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff; /* White background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1.5px solid transparent;
+    transition: border-bottom 0.3s ease;
+    color: #333 !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    border-bottom: 1.5px solid var(--orange);
+    
+}
+
+/* Navbar Styling */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%; 
+    background: #333;
+}
+
+header .nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+}
+
+header .nav-bar a {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .nav-bar a:hover {
+    color: var(--orange);
+}
+
+/* Search Bar Styling */
+/* header .search-bar-container {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+}
+
+#search-bar {
+    border: none;
+    background: transparent;
+    color: #000;
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+#search-bar::placeholder {
+    color: #000;
+    opacity: 0.8;
+}
+
+.search-bar-container label i {
+    font-size: 1rem;
+    color: #000;
+} */
+/* header.icons i{
+    font-size: 2.5rem;
+    color:#fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header.icons i:hover{
+    color:var(--orange);
+} */
+header .icons #search-btn,
+header .icons #login-btn{
+    font-size: 2.5rem;
+    color: #fff;;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+header .icons #search-btn:hover,
+header .icons #login-btn:hover {
+    color: var(--orange);
+}
+
+header.search-bar-container{
+    position: absolute;
+    top: 100%; right: 0; left: 0;
+    padding: 1.5rem 2rem;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    display: flex;
+    align-items: center;
+}
+.login-form-container{
+    position: fixed;
+    top: -120%; left: 0;
+    z-index: 10000;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form-container.active{
+    top:0;
+} 
+.login-form-container form{
+    margin: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: .5rem;
+    background: #fff;
+    width: 50rem;
+}
+.login-form-container h3{
+    font-size: 3rem;
+    color: #444;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+.login-form-container .box{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    margin: .6rem 0;
+    border: .1rem solid rgba(0,0,0,.3);
+    text-transform: none;
+}
+.login-form-container .box:focus{
+    border-color: var(--orange);
+}
+.login-form-container #remember{
+    margin: 2rem 0;
+}
+.login-form-container label{
+    font-size: 1.5rem;
+}
+.login-form-container .btn{
+    display: block;
+    width: 100%;
+}
+.login-form-container form p{
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #666;
+}
+.login-form-container form p a{
+    color: var(--orange);
+
+}
+.login-form-container form p a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.login-form-container #form-close{
+    position: absolute;
+    top: 2rem; right: 3rem;
+    font-size: 5rem;
+    color: #fff;
+    cursor: pointer;
+}
+/* Your existing CSS code here */
+
+/* Add styling for the forgot-container */
+.forgot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 5rem auto;
+    max-width: 400px;
+}
+
+.forgot-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.forgot-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.forgot-container .btn {
+    background: var(--orange);
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.forgot-container .btn:hover {
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+}
+
+
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 400px;
+}
+
+.signup-form-container h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.signup-form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.signup-form-container .box {
+    height: 2.5rem; /* Adjust the height as needed */
+}
+
+.signup-form-container .btn {
+    background: var(--orange);
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-form-container .btn:hover {
+    background: rgba(255, 165, 0, 0.2);
+    color: var(--orange);
+}
+
+.signup-form-container a {
+    text-decoration: none;
+    color: var(--orange);
+}
+
+.signup-form-container a:hover {
+    text-decoration: underline;
+}
+#menu-bar{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display:none;
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    flex-flow: column;
+    position: relative;
+    z-index:0;
+}
+.home .content{
+    text-align: center;
+}
+.home .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0.3rem .5rem rgba(0,0,0,.1);
+
+}
+.home .content p{
+    font-size: 2.5rem;
+    color: #fff;
+    padding: .5rem 0%;
+
+}
+
+.home .video-container video{
+    position: absolute;
+    top: 0; left:0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* .home .controls{
+    padding: 1rem;
+    border-radius: 5rem;
+    background: rgba(0,0,0,.7);
+    position: relative;
+    top: 10rem;
+}
+
+
+.home .controls .vid-btn{
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+
+.home .controls .vid-btn.active{
+    background: var(--orange);
+} */
+/* .top-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e6e7;
+}
+.top-section .box{
+    height:400px;
+    width: 23%;
+    background-color: white;
+    padding:20px 0px 15px;
+    margin-top: 10px;
+}
+.top-section .box-img{
+    height:300px;
+    background-size:cover;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+}
+.top-section .box-content{
+    margin-left:1rem;
+    margin-right: 1rem;
+}
+.top-section .box-content p{
+    color: #333;
+} */
+
+
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #e2e6e7;
+}
+
+.top-section .box {
+    /* height: 400px; */
+    width: 23%;
+    background-color: white;
+    padding: 15px 0px 10px;
+    margin-top: 10px;
+    transition: transform 0.5s;
+}
+
+.top-section .box:hover {
+    transform: translateY(-10px);
+}
+
+.top-section .box-img {
+     height: 300px;
+    background-size: cover;
+    margin-top: 1rem;
+    margin-bottom: 1rem; 
+    
+}
+
+.top-section .box-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+      /* animation: slideIn 1s ease-out ; */
+}
+
+.top-section .box-content p {
+    color: #333;
+} 
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(0); /* Slide in to the left */
+    }
+}
+.home1 {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.fort-image {
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    animation: gliding 3s ease forwards; /* Gliding effect on page load and stay in the final position */
+}
+
+.fort-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.centered-content h3 {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translateX(-50%); /* Adjust text centering */
+    color: #fff; /* Text color */
+    padding: 10px;
+    font-size: 3.5rem; /* Adjust the padding as needed */
+}
+
+@keyframes gliding {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(10%); /* Adjust the distance of the gliding effect */
+    }
+}
+/* Additional CSS for your requirements */
+.fort-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  /* Style individual fort divs */
+  .fort {
+    width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+    animation: shift 2s linear infinite;
+    display: inline-block;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px;
+  }
+  
+  /* Define animation keyframes for the shifting effect */
+  @keyframes shift {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Style fort images */
+  .fort-image1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  /* Add the hover gliding effect to images */
+  .fort:hover .fort-image1 img {
+    transform: scale(1.1);
+  }
+  
+  /* Style the location button */
+  .location button {
+    background-color: #ffa550;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .location button:hover {
+    background-color: #ff7d00;
+  }
+  
+  /* Style fort titles */
+  .fort h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+    border-bottom: 2px solid #333;
+  }
+  
+  /* Style fort descriptions */
+  .fort p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    padding: 10px;
+  }
+  
+  /* Style text in span tags to be orange */
+  span {
+    color: orange;
+  }
+
+ 
+  .reason-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    display: none;
+    padding: 50px;
+    text-align:center;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+
+  .slider img {
+    width: 30%; /* Adjust image size as needed */
+  }
+
+  .reason-container h3 {
+    font-size: 3rem; /* Adjust text size as needed */
+    
+  }
+
+  .reason-container p {
+    text-align: center;
+    font-size: 17px;
+  }
+  /* .reason-container h2 {
+    font-size: 4.5rem;
+    height: 50px;
+    width: 30%;
+    background-color: #ffa550;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+  } */
+  .reason-container h2 {
+    font-size: 4.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    height: 50px;
+    width: 30%;
+    background-color: #ffa550;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .reason-container h2::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform 0.5s;
+  }
+
+  .reason-container h2:hover::after {
+    transform: scaleX(1);
+  }
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .box-container{
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+  .row{
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.row img{
+    width: 100%; 
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+    padding-bottom: 10px;
+}
+.layers{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.1), #ffa550);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+.layers h5{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.layers p{
+    color: #2a2a2a;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.layers i{
+    color: #ffa550;
+    margin-top: 5px;
+    font-size: 18px;
+    background: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.row:hover img{
+    transform: scale(1.1);
+}
+.row:hover .layers{
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:1200px){
+    html{
+        font-size: 55%;
+        
+    }
+}
+/* @media (max-width:991px){
+header{
+    padding: 2rem;
+}
+} */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+    
+    header .nav-bar {
+        display: none; 
+    }
+    
+    header .icons {
+        display: flex; 
+    }
+}
+/* 
+@media (min-width: 769px) {
+    header {
+        padding: 1rem 9%; 
+    }
+    
+    header .nav-bar {
+
+        position: absolute;
+        top: 100%; right:0;left:0;
+        display: flex;
+        border-top: .1rem solid rgba(255,255,255,.2);
+        padding: 1rem 2rem; 
+        }
+
+    #menu-bar{
+        display: initial;
+    }
+    
+    
+} */
+/* Default navbar styles (for screens of all sizes) */
+
+/* @media (max-width: 768px) {
+    header .nav-bar {
+        display: none; 
+    }
+    
+    header .icons {
+        display: flex; 
+    }
+}
+
+@media (min-width: 769px) {
+    header .nav-bar {
+        display: flex; 
+    }
+    
+}
+@media (max-width: 768px) {
+    #menu-bar {
+        display: block; 
+    }
+
+    
+    header .nav-bar a{
+        display:block;
+        border-radius: .5rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+} */
+@media (max-width: 768px) {
+    header .nav-bar {
+        display: none; /* Hide the navigation links on mobile */
+        flex-direction: column;
+        background-color: #393939;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .nav-bar.active {
+        display: flex;
+    }
+
+    #menu-bar {
+        display: block; /* Show the menu icon on smaller screens */
+        font-size: 2rem;
+        cursor: pointer;
+    }
+}
+
+/* Additional styles for the navigation links when the menu is hidden */
+@media (min-width: 769px) {
+    header .nav-bar {
+        display: flex; 
+    }
+}
+@media(min-width: 450px){
+    html{
+        font-size: 50%;
+        
+    }
+}
+@media (max-width: 768px) {
+    .dropdown-content {
+        display: none;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        color: #fff;
+        
+    }
+    .dropdown-content a {
+        color: #fff; /* Change the text color to white */
+    }
+}
+@media (max-width: 768px) {
+    .top-section .box {
+        width: 100%;
+    }
+    
+    .top-section .box-img {
+        height: 200px; /* Set the desired height for mobile devices */
+    }
+}
+@media(max-width: 450px){
+    .heading span{
+        font-size: 2.5rem;
+    }
+}
