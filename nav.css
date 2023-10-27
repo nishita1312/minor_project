@@ -1,0 +1,24 @@
+/* Style the dropdown button */
+.dropdown-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hide the dropdown content by default */
+.dropdown-content {
+    display: none;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Show the dropdown content when the button is clicked */
+.active {
+    display: block;
+}
